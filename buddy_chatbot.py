@@ -2,9 +2,8 @@ import streamlit as st
 import openai
 from datetime import datetime
 # Page config
-<script>
-(function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="hWRc78rz6juuOuzaUNB29";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
-</script>
+with open('index.html', 'r', encoding='utf-8') as f:
+    html_template = f.read()
 st.set_page_config(page_title="Buddy - An Interactive Chatbot", page_icon="🤖")
 # Custom CSS for better UI
 st.markdown("""
@@ -62,6 +61,7 @@ st.title("🤖 Buddy - An Interactive Chatbot")
     
     # Add assistant response to chat history
     #st.session_state.messages.append({"role": "assistant", "content": full_response})
+
 
 
 
