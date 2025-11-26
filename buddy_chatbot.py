@@ -1,10 +1,8 @@
 import streamlit as st
 import openai
 from datetime import datetime
-
 # Page config
 st.set_page_config(page_title="Buddy - An Interactive Chatbot", page_icon="🤖")
-
 # Custom CSS for better UI
 st.markdown("""
     <style>
@@ -90,6 +88,7 @@ st.title("🤖 Buddy - An Interactive Chatbot")
     
     # Add assistant response to chat history
     st.session_state.messages.append({"role": "assistant", "content": full_response})
+
 
 
 
