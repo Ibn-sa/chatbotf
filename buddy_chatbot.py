@@ -54,7 +54,7 @@ with st.sidebar:
 # Main chat interface
 st.title("🤖 Buddy - An Interactive Chatbot")
   # Add user message to chat history
-    st.session_state.messages.append({"role": "user", "content": prompt})
+   # st.session_state.messages.append({"role": "user", "content": prompt})
     
     # Display user message in chat message container
     with st.chat_message("user"):
@@ -88,6 +88,7 @@ st.title("🤖 Buddy - An Interactive Chatbot")
     
     # Add assistant response to chat history
     #st.session_state.messages.append({"role": "assistant", "content": full_response})
+
 
 
 
