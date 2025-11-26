@@ -87,7 +87,8 @@ st.title("🤖 Buddy - An Interactive Chatbot")
             message_placeholder.markdown(full_response)
     
     # Add assistant response to chat history
-    st.session_state.messages.append({"role": "assistant", "content": full_response})
+    #st.session_state.messages.append({"role": "assistant", "content": full_response})
+
 
 
 
