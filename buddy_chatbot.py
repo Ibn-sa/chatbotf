@@ -3,7 +3,11 @@ import openai
 from datetime import datetime
 # Page config
 with open('index.html', 'r', encoding='utf-8') as f:
-    html_template = f.read()
+    index.html = f.read()
+
+# You can then process this template (e.g., with a templating engine)
+# or directly serve it.
+print(index.html)
 st.set_page_config(page_title="Buddy - An Interactive Chatbot", page_icon="🤖")
 # Custom CSS for better UI
 st.markdown("""
@@ -61,6 +65,7 @@ st.title("🤖 Buddy - An Interactive Chatbot")
     
     # Add assistant response to chat history
     #st.session_state.messages.append({"role": "assistant", "content": full_response})
+
 
 
 
