@@ -54,18 +54,9 @@ with st.sidebar:
     st.markdown("Built by Students of 1PHY19")
 
 # Main chat interface
-st.title("🤖 Buddy - Your Personal Chatbot")
+st.title("🤖 Buddy - An Interactive Chatbot")
 
-# Display chat messages
-for message in st.session_state.messages:
-    with st.chat_message(message["role"]):
-        st.markdown(message["content"])
 
-# Chat input
-if prompt := st.chat_input("Type your message here..."):
-    if not openai_api_key:
-        st.warning("Please enter your OpenAI API key in the sidebar to chat with Buddy.")
-        st.stop()
     
     # Add user message to chat history
     st.session_state.messages.append({"role": "user", "content": prompt})
@@ -102,4 +93,5 @@ if prompt := st.chat_input("Type your message here..."):
     
     # Add assistant response to chat history
     st.session_state.messages.append({"role": "assistant", "content": full_response})
+
 
