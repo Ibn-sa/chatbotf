@@ -3,7 +3,7 @@ import openai
 from datetime import datetime
 
 # Page config
-st.set_page_config(page_title="Buddy - Your Personal Chatbot", page_icon="🤖")
+st.set_page_config(page_title="Buddy - An Interactive Chatbot", page_icon="🤖")
 
 # Custom CSS for better UI
 st.markdown("""
@@ -51,7 +51,7 @@ with st.sidebar:
     st.markdown("---")
     st.markdown("### About")
     st.markdown("Buddy is your personal chatbot assistant. Ask me anything!")
-    st.markdown("Built with ❤️ using Streamlit")
+    st.markdown("Built by Students of 1PHY19")
 
 # Main chat interface
 st.title("🤖 Buddy - Your Personal Chatbot")
@@ -102,3 +102,4 @@ if prompt := st.chat_input("Type your message here..."):
     
     # Add assistant response to chat history
     st.session_state.messages.append({"role": "assistant", "content": full_response})
+
