@@ -57,34 +57,9 @@ st.title("🤖 Buddy - An Interactive Chatbot")
    # st.session_state.messages.append({"role": "user", "content": prompt})
     
     
-    # Display assistant response in chat message container
-    with st.chat_message("assistant"):
-        message_placeholder = st.empty()
-        full_response = ""
-        
-        try:
-            # Initialize OpenAI client
-            client = openai.OpenAI(api_key=openai_api_key)
-            
-            # Get response from OpenAI
-            for response in client.chat.completions.create(
-                model="gpt-3.5-turbo",
-                messages=[{"role": m["role"], "content": m["content"]} for m in st.session_state.messages],
-                stream=True,
-            ):
-                if response.choices[0].delta.content is not None:
-                    full_response += response.choices[0].delta.content
-                    message_placeholder.markdown(full_response + "▌")
-            
-            message_placeholder.markdown(full_response)
-            
-        except Exception as e:
-            st.error(f"An error occurred: {str(e)}")
-            full_response = "I'm sorry, I encountered an error. Please check your API key and try again."
-            message_placeholder.markdown(full_response)
-    
     # Add assistant response to chat history
     #st.session_state.messages.append({"role": "assistant", "content": full_response})
+
 
 
 
