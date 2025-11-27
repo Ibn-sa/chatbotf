@@ -58,13 +58,14 @@ with st.sidebar:
     st.markdown("Built by Students of Presidency University")
 
 # Main chat interface
-st.title("🤖 Buddy - An Interactive Chatbot Designed by Us")
+st.title("🤖 Buddy - An Interactive Chatbot Designed by INV226")
   # Add user message to chat history
    # st.session_state.messages.append({"role": "user", "content": prompt})
     
     
     # Add assistant response to chat history
     #st.session_state.messages.append({"role": "assistant", "content": full_response})
+
 
 
 
