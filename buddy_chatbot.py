@@ -48,8 +48,8 @@ if 'messages' not in st.session_state:
 
 # Sidebar for API key and settings
 with st.sidebar:
-    st.title("🔑 Settings")
-    openai_api_key = st.text_input("Enter your OpenAI API Key:", type="password")
+    st.title("LOGIN PAGE")
+    openai_api_key = st.text_input("Enter Email ID:", type="password")
     st.markdown("[Get your OpenAI API key](https://platform.openai.com/account/api-keys)")
     
     st.markdown("---")
@@ -58,13 +58,14 @@ with st.sidebar:
     st.markdown("Built by Students of 1PHY19")
 
 # Main chat interface
-st.title("🤖 Buddy - An Interactive Chatbot")
+st.title("🤖 Buddy - An Interactive Chatbot Designed by Our")
   # Add user message to chat history
    # st.session_state.messages.append({"role": "user", "content": prompt})
     
     
     # Add assistant response to chat history
     #st.session_state.messages.append({"role": "assistant", "content": full_response})
+
 
 
 
