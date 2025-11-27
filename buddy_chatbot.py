@@ -50,12 +50,12 @@ if 'messages' not in st.session_state:
 with st.sidebar:
     st.title("LOGIN PAGE")
     openai_api_key = st.text_input("Enter Email ID:", type="password")
-    st.markdown("[Get your OpenAI API key](https://platform.openai.com/account/api-keys)")
+    st.markdown("[Forgot your Email?](https://support.google.com/accounts/answer/7682439?hl=en)")
     
     st.markdown("---")
     st.markdown("### About")
     st.markdown("Buddy is your personal chatbot assistant. Ask me anything!")
-    st.markdown("Built by Students of 1PHY19")
+    st.markdown("Built by Students of Presidency University")
 
 # Main chat interface
 st.title("🤖 Buddy - An Interactive Chatbot Designed by Us")
@@ -65,6 +65,7 @@ st.title("🤖 Buddy - An Interactive Chatbot Designed by Us")
     
     # Add assistant response to chat history
     #st.session_state.messages.append({"role": "assistant", "content": full_response})
+
 
 
 
